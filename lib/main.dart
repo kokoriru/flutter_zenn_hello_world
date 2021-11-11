@@ -75,7 +75,10 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Text('初めてのテキスト'),
+      body: Column(children: [
+        Text('初めてのテキスト'),
+        Text('2番目のテキスト'),
+      ]),
     );
   }
 }
