@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
             Text(
-              '$_type', style: TextStyle(fontSize: 20, color: Colors.blue)
+              _type, style: TextStyle(fontSize: 20, color: Colors.blue)
             )
           ],
         ),
