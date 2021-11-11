@@ -81,6 +81,11 @@ class _MyHomePageState extends State<MyHomePage> {
           Text('初めてのタイトル'),
         ],
       )),
+      drawer: Drawer(
+        child: Center(
+          child: Text('Drawer')
+        ),
+      ),
       body: Text('初めてのテキスト'),
     );
   }
