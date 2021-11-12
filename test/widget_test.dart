@@ -15,6 +15,16 @@ void main() {
     var ans = 10;
     expect(ans, 10);
   });
+
+  test('mytest2', () {
+    var param1 = 10;
+    var param2 = 20;
+    var calc = Calc();
+    var ans = calc.add(param1, param2);
+
+    expect(ans, 30);
+  });
+
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
@@ -31,4 +41,10 @@ void main() {
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
   });
+}
+
+class Calc {
+  add(int x, int y) {
+    return x + y;
+  }
 }
