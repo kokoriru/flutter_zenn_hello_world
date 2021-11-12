@@ -31,8 +31,13 @@ void main() {
 
     //0 が書かれている Widget が1つであることをテスト
     expect(find.text('0'), findsOneWidget);
+    //偶数 が書かれている Widget が1つであることをテスト
+    expect(find.text('偶数'), findsOneWidget);
+
     //1 が書かれている Widget がないことをテスト
     expect(find.text('1'), findsNothing);
+    //奇数 が書かれている Widget がないことをテスト
+    expect(find.text('奇数'), findsNothing);
 
     // アイコンが [+] の Widget をタップする
     await tester.tap(find.byIcon(Icons.add));
@@ -41,8 +46,13 @@ void main() {
 
     //0 が書かれている Widget がないことをテスト
     expect(find.text('0'), findsNothing);
+    //偶数 が書かれている Widget がないことをテスト
+    expect(find.text('偶数'), findsNothing);
+
     //1 が書かれている Widget が1つであることをテスト
     expect(find.text('1'), findsOneWidget);
+    //奇数 が書かれている Widget が1つであることをテスト
+    expect(find.text('奇数'), findsOneWidget);
   });
 }
 
