@@ -26,19 +26,22 @@ void main() {
   });
 
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+    // 画面を構築
     await tester.pumpWidget(const MyApp());
 
-    // Verify that our counter starts at 0.
+    //0 が書かれている Widget が1つであることをテスト
     expect(find.text('0'), findsOneWidget);
+    //1 が書かれている Widget がないことをテスト
     expect(find.text('1'), findsNothing);
 
-    // Tap the '+' icon and trigger a frame.
+    // アイコンが [+] の Widget をタップする
     await tester.tap(find.byIcon(Icons.add));
+    // Widget ツリーの再構築
     await tester.pump();
 
-    // Verify that our counter has incremented.
+    //0 が書かれている Widget がないことをテスト
     expect(find.text('0'), findsNothing);
+    //1 が書かれている Widget が1つであることをテスト
     expect(find.text('1'), findsOneWidget);
   });
 }
